@@ -78,7 +78,13 @@ img{
  
  .player1, .player2 {
   flex: 1;
-  background-color: white;
+  background-color: whitesmoke;
  }
+
+.reset {
+  text-align: center;
+  padding-top: 20px;
+  
+}
 
 

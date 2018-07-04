@@ -1,6 +1,7 @@
 var gameBoard = document.querySelector('.game-board');
 var playingSquares = document.querySelectorAll('.game-board div');
 var gameWinner = document.querySelector('.game-winner');
+var resetBtn = document.querySelector('.reset');
 
 var turnCount = 0
 var currentPlayer = ''
@@ -26,7 +27,6 @@ var gameCounter = function() {
     console.log('Player 2\s turn')
   }
   if (turnCount === 9){
-    console.log("DRAW");
     gameWinner.textContent = "DRAW"; 
   }
 
@@ -52,6 +52,21 @@ var gameCounter = function() {
 
 }
 gameBoard.addEventListener('click', gameCounter);
+
+
+
+var resetToDos = function(){
+  playingSquares.forEach(function(item){
+    item.classList.remove('mark-x')
+    item.classList.remove('mark-o')
+    })
+  gameWinner.textContent = "";
+  turnCount = 0;
+  //want to add a player tally
+}
+resetBtn.addEventListener('click', resetToDos)
+
+
 
 //find 3 in a row horizontally on first row 
   
