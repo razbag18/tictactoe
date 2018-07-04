@@ -13,7 +13,7 @@ var gameCounter = function() {
   //equal to 1, and is not divisible by 2
   turnCount++
   //if the turnCount is divisible by 2, then on event, mark-o
-  if (turnCount % 2 === 0) {
+   if (turnCount % 2 === 0) {
     event.target.classList.add('mark-o')
     currentPlayer = 'mark-o'
     winMessage = "dumplings WIN!"
@@ -25,8 +25,15 @@ var gameCounter = function() {
     winMessage = "chopsticks WIN!"
     console.log('Player 2\s turn')
   }
+  if (turnCount === 9){
+    console.log("DRAW");
+    gameWinner.textContent = "DRAW"; 
+  }
 
+  //refactored code into a function to check lines for a win. parameters were checking 3 squares we passed in, the current person playing, and the win message
   var lineCheck = function(sq1, sq2, sq3, currentPlayer, winMessage) {
+    //sq1 in the first function call is: playingSquares[0], sq2 is: playingSquares[1], sq2 is playingSquares[2]
+    //currentPlayer is my class, in the first case its 'mark-o' and winMessage is the message assosiated with the player playing.
     if (sq1.classList.contains(currentPlayer) && 
     sq2.classList.contains(currentPlayer) && 
     sq3.classList.contains(currentPlayer)){

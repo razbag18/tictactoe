@@ -17,7 +17,7 @@ container{
   width: 500px;
   display: flex;
   flex-wrap: wrap;
-  width:100%;
+  width:120%;
   
 }
 .game-board div{
@@ -49,29 +49,31 @@ header {
   padding-top: 1%;
 }
 
+img{
+  size: 2px 2px;
+}
  .mark-o{
   background-image: url(../tictactoe/wonton.png);
   background-size: contain;
   background-repeat: no-repeat;
-  height: 150px;
-  width: 100px;
+  background-position: center;
+  transition: all 600ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
 } 
 
  .mark-x{
   background-image: url(../tictactoe/chopsticks.png);
   background-size: contain;
   background-repeat: no-repeat;
-  height: 150px;
-  width: 100px;
+  background-position: center;
+  transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
  }
 
  .player1-turn, .player2-turn {
    display: flex;
    flex-wrap: wrap;
-   width: 30%;
-   border: 2px solid rebeccapurple;
+   width: 40%;
    justify-content: space-between;
-   margin: 10%;
+   margin: 5%;
  }
  
  .player1, .player2 {
