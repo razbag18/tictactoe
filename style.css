@@ -9,6 +9,12 @@ body {
 
 container{
   display: flex;
+  margin-left: 7%
+}
+
+
+.first-turn{
+  font-size: 15pt;
 }
 
 .game-board{
@@ -17,27 +23,22 @@ container{
   width: 500px;
   display: flex;
   flex-wrap: wrap;
-  width:120%;
   
 }
 .game-board div{
   flex: 0 0 33.3333%;
   border: 1px solid white;
-  height: 150px;
-  width: 100px;
+  /* height: 150px;
+  width: 150px; */
 }
 
 .game-winner{
-  margin: 2%;
-  margin-left: 30%;
-  margin-right: 30%; 
+  margin-left: 34%;
   background-color: white; 
   font-family:'Permanent Marker', cursive;
   font-size: 30px;
   text-align: center;
-  /* background-image: url(../tictactoe/napkin.png);
-  background-size: 100px 100px;
-  background-repeat: no-repeat; */
+  width: 33%;
 }
 
 header {
@@ -50,7 +51,8 @@ header {
 }
 
 img{
-  size: 2px 2px;
+  height: 150px;
+  width: 150px;
 }
  .mark-o{
   background-image: url(../tictactoe/wonton.png);
@@ -68,22 +70,33 @@ img{
   transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
  }
 
+ .player2-score, .player1-score{
+   flex: 1;
+   background-color: white;
+   height:190px;
+   width: 180px
+ }
  .player1-turn, .player2-turn {
    display: flex;
    flex-wrap: wrap;
-   width: 40%;
    justify-content: space-between;
    margin: 5%;
  }
  
  .player1, .player2 {
   flex: 1;
-  background-color: whitesmoke;
+  width: 100%;
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+  height: 90%;
+  font-size: 20pt;
  }
+
 
 .reset {
   text-align: center;
   padding-top: 20px;
+  padding-bottom: 20px;
   
 }
 
