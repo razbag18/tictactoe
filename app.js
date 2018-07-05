@@ -46,6 +46,7 @@ var gameCounter = function() {
       // gameWinner.textContent = 'DRAW'; 
       playerTwo.textContent = 'DRAW';
       playerOne.textContent = 'DRAW';
+      resetBtn.classList.remove('hidden')
     }
 
     //refactored code into a function to check lines for a win. parameters were checking 3 squares we passed in, the current person playing, and the win message
