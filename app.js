@@ -1,7 +1,7 @@
 var gameBoard = document.querySelector('.game-board');
 var playingSquares = document.querySelectorAll('.game-board div');
 var gameWinner = document.querySelector('.game-winner');
-var resetBtn = document.querySelector('.reset');
+var resetBtn = document.querySelector('#reset');
 var playerOne = document.querySelector('.player1-score');
 var playerTwo = document.querySelector('.player2-score');
 var dumplingsWin = document.querySelector('#dumplings');
@@ -58,7 +58,7 @@ var gameCounter = function() {
         // gameWinner.textContent = winMessage;
         playerOne.textContent = winMessage;
         playerTwo.textContent = winMessage;
-
+        resetBtn.classList.remove('hidden')
         inPlay = false
         // gameCount ++
         // playerOne.textContent = gameCount;
@@ -90,6 +90,7 @@ var resetGame = function(){
   playerTwo.textContent = "";
   turnCount = 0;
   inPlay = true;
+  resetBtn.classList.add('hidden')
   // gameCount ++
   //want to add a player tally
 }
