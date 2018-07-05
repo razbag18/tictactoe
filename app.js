@@ -56,14 +56,12 @@ var gameCounter = function() {
       if (sq1.classList.contains(currentPlayer) && 
       sq2.classList.contains(currentPlayer) && 
       sq3.classList.contains(currentPlayer)){
-        // gameWinner.textContent = winMessage;
+        
         playerOne.textContent = winMessage;
         playerTwo.textContent = winMessage;
         resetBtn.classList.remove('hidden')
         inPlay = false
         // gameCount ++
-        // playerOne.textContent = gameCount;
-        //score the game here too??
       }
     }
     //calling the lineCheck function with my passed in arguments. First call is checking if 
@@ -96,104 +94,3 @@ var resetGame = function(){
   //want to add a player tally
 }
 resetBtn.addEventListener('click', resetGame)
-
-
-
-//find 3 in a row horizontally on first row 
-  
-  // if (playingSquares[0].classList.contains('mark-o') &&
-  // playingSquares[1].classList.contains('mark-o') &&
-  // playingSquares[2].classList.contains('mark-o')){
-  //   gameWinner.textContent = ("Dumplings WIN!");
-  //}//find 3 in a row horizontally on second row 
-  // if (playingSquares[3].classList.contains('mark-x') &&
-  // playingSquares[4].classList.contains('mark-x') &&
-  // playingSquares[5].classList.contains('mark-x')){
-  //   gameWinner.textContent = ("Chopsticks WIN!");
-  // }
-  // if (playingSquares[3].classList.contains('mark-o') &&
-  // playingSquares[4].classList.contains('mark-o') &&
-  // playingSquares[5].classList.contains('mark-o')){
-  //   gameWinner.textContent = ("Dumplings WIN!");
-  //}//find 4 in a row horizontally on third row
-  // if (playingSquares[6].classList.contains('mark-x') &&
-  // playingSquares[7].classList.contains('mark-x') &&
-  // playingSquares[8].classList.contains('mark-x')){
-  //   gameWinner.textContent = ("Chopsticks WIN!")
-  // }
-  // if (playingSquares[6].classList.contains('mark-o') &&
-  // playingSquares[7].classList.contains('mark-o') &&
-  // playingSquares[8].classList.contains('mark-o')){
-  //   gameWinner.textContent = ("Dumplings WIN!")
-  // }//find 3 in a row vertically on first column
-  // if (playingSquares[0].classList.contains('mark-x') && 
-  // playingSquares[3].classList.contains('mark-x') && 
-  // playingSquares[6].classList.contains('mark-x')){
-  //   gameWinner.textContent = ("Chopsticks WIN!");
-  // } if (playingSquares[0].classList.contains('mark-o') &&
-  // playingSquares[3].classList.contains('mark-o') &&
-  // playingSquares[6].classList.contains('mark-o')){
-  //   gameWinner.textContent = ("Dumplings WIN!");
-  // }//find 3 in a row vertically on second column
-  // if(playingSquares[1].classList.contains('mark-x') &&
-  // playingSquares[4].classList.contains('mark-x') &&
-  // playingSquares[7].classList.contains('mark-x')){
-  //   gameWinner.textContent = ("Chopsticks WIN!");
-  // } if (playingSquares[1].classList.contains('mark-o') &&
-  // playingSquares[4].classList.contains('mark-o') &&
-  // playingSquares[7].classList.contains('mark-o')){
-  //   gameWinner.textContent = ("Dumplings WIN!");
-  // }//find 3 in a row vertically on third column
-  // if(playingSquares[2].classList.contains('mark-x') &&
-  // playingSquares[5].classList.contains('mark-x') &&
-  // playingSquares[8].classList.contains('mark-x')){
-  //   gameWinner.textContent = ("Chopsticks WIN!");
-  // }
-  // if (playingSquares[2].classList.contains('mark-o') &&
-  // playingSquares[5].classList.contains('mark-o') &&
-  // playingSquares[8].classList.contains('mark-o')){
-  //   gameWinner.textContent = ("Dumplings WIN!");
-  // }//finding diagonally from index 0 to 8
-  // if(playingSquares[0].classList.contains('mark-x') &&
-  // playingSquares[4].classList.contains('mark-x') &&
-  // playingSquares[8].classList.contains('mark-x')){
-  //   gameWinner.textContent = ("Chopsticks WIN!");
-  // }
-  // if (playingSquares[0].classList.contains('mark-o') &&
-  // playingSquares[4].classList.contains('mark-o') &&
-  // playingSquares[8].classList.contains('mark-o')){
-  //   gameWinner.textContent = ("Dumplings WIN!");
-  //finding diagonally from index 2 to 6
-  // if(playingSquares[2].classList.contains('mark-x') &&
-  // playingSquares[4].classList.contains('mark-x') &&
-  // playingSquares[6].classList.contains('mark-x')){
-  //   gameWinner.textContent = ("Chopsticks WIN!");
-  // }
-  // if (playingSquares[2].classList.contains('mark-o') &&
-  // playingSquares[4].classList.contains('mark-o') &&
-  // playingSquares[6].classList.contains('mark-o')){
-  //   gameWinner.textContent = ("Dumplings WIN!");
-  // } //else if (turnCount === 9 && //noone has won) {
-  //   //gameWinner.textContent = ("DRAW");
-
-
-
-
-
-
-
-
-
-// var markO = function(event){
-//  event.target.classList.add('mark-o')
-//  }
-
-//  
-
-
-
-// var markX = function(event){
-//   event.target.classList.add('mark-x')
-// }
-
-// gameBoard.addEventListener('click', markX);
