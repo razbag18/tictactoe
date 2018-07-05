@@ -4,13 +4,13 @@ var gameWinner = document.querySelector('.game-winner');
 var resetBtn = document.querySelector('.reset');
 var playerOne = document.querySelector('.player1-score');
 var playerTwo = document.querySelector('.player2-score');
+var dumplingsWin = document.querySelector('#dumplings');
+var chopsticksWin = document.querySelector('#chopsticks')
 var turnCount = 0
 var currentPlayer = ''
 var winMessage = ''
-
-// if (turnCount === 0){
-//   playerOne.textContent = "Chopsticks turn";
-// } 
+var inPlay = true
+var gameCount = 0
 
 // function for alternating between the two
 var gameCounter = function() {
@@ -18,9 +18,10 @@ var gameCounter = function() {
   //but after function is run, add 1 to itself. After turn one, the turnCount is now 
   //equal to 1, and is not divisible by 2
 
+  //IF I WANT GAME TO BE ONLY 3 INCLUDE IN CODE BELOW gameCount <3
 
   //if the targeted class does not contain 'mark-o' or 'mark-x' allow the game to run
-  if (!event.target.classList.contains('mark-o') && !event.target.classList.contains('mark-x')) {
+  if (!event.target.classList.contains('mark-o') && !event.target.classList.contains('mark-x') && inPlay) {
 
     turnCount++
 
@@ -28,23 +29,23 @@ var gameCounter = function() {
     if (turnCount % 2 === 0) {
       event.target.classList.add('mark-o')
       currentPlayer = 'mark-o'
-      playerTwo.textContent = 'Chopsticks turn'
-      playerOne.textContent = ''
-      winMessage = "dumplings WIN!"
+      playerTwo.textContent = ''
+      playerOne.textContent = 'Chopsticks turn'
+      winMessage = 'dumplings WIN!'
       console.log('Player 1\s turn')
       //otherwise, on event, mark-x
     } else {
       event.target.classList.add('mark-x')
       currentPlayer = 'mark-x'
-      playerTwo.textContent = ''
-      playerOne.textContent = 'Dumplings turn'
-      winMessage = "chopsticks WIN!"
+      playerTwo.textContent = 'Dumplings turn'
+      playerOne.textContent = ''
+      winMessage = 'chopsticks WIN!'
       console.log('Player 2\s turn')
     }
     if (turnCount === 9){
-      gameWinner.textContent = "DRAW"; 
-      playerTwo.textContent = 'TRY AGAIN'
-      playerOne.textContent = 'TRY AGAIN'
+      // gameWinner.textContent = 'DRAW'; 
+      playerTwo.textContent = 'DRAW';
+      playerOne.textContent = 'DRAW';
     }
 
     //refactored code into a function to check lines for a win. parameters were checking 3 squares we passed in, the current person playing, and the win message
@@ -54,8 +55,13 @@ var gameCounter = function() {
       if (sq1.classList.contains(currentPlayer) && 
       sq2.classList.contains(currentPlayer) && 
       sq3.classList.contains(currentPlayer)){
-        gameWinner.textContent = winMessage;
-        //stop the game here?
+        // gameWinner.textContent = winMessage;
+        playerOne.textContent = winMessage;
+        playerTwo.textContent = winMessage;
+
+        inPlay = false
+        // gameCount ++
+        // playerOne.textContent = gameCount;
         //score the game here too??
       }
     }
@@ -71,20 +77,20 @@ var gameCounter = function() {
     lineCheck(playingSquares[2], playingSquares[4], playingSquares[6], currentPlayer, winMessage);
   }
 }
-//on click of the gameboars, running thr function gameCounter, and within that function, lineCheck
+//on click of the gameboard, running thr function gameCounter, and within that function, lineCheck
 gameBoard.addEventListener('click', gameCounter);
-
-
 
 var resetGame = function(){
   playingSquares.forEach(function(item){
     item.classList.remove('mark-x')
     item.classList.remove('mark-o')
     })
-  gameWinner.textContent = "";
-  playerOne.textContent = "Chopsticks Turn"
-  playerTwo.textContent = ""
+  // gameWinner.textContent = "";
+  playerOne.textContent = "Chopsticks turn";
+  playerTwo.textContent = "";
   turnCount = 0;
+  inPlay = true;
+  // gameCount ++
   //want to add a player tally
 }
 resetBtn.addEventListener('click', resetGame)

@@ -9,7 +9,8 @@ body {
 
 container{
   display: flex;
-  margin-left: 7%
+  margin-left: 7%;
+
 }
 
 
@@ -21,6 +22,7 @@ container{
   background-image: url(../tictactoe/bamboomat.jpg);
   background-size: 500px 500px;
   width: 500px;
+  height: 500px;
   display: flex;
   flex-wrap: wrap;
   
@@ -32,14 +34,14 @@ container{
   width: 150px; */
 }
 
-.game-winner{
+/* .game-winner{
   margin-left: 34%;
   background-color: white; 
   font-family:'Permanent Marker', cursive;
   font-size: 30px;
   text-align: center;
   width: 33%;
-}
+} */
 
 header {
   color: white;
@@ -49,6 +51,10 @@ header {
   padding-bottom: 1%;
   padding-top: 1%;
 }
+
+/* .hidden {
+  display: none;
+}  */
 
 img{
   height: 150px;
@@ -73,7 +79,8 @@ img{
  .player2-score, .player1-score{
    flex: 1;
    background-color: white;
-   height:190px;
+   border-radius: 25px;
+   height:90px;
    width: 180px
  }
  .player1-turn, .player2-turn {
@@ -99,5 +106,8 @@ img{
   padding-bottom: 20px;
   
 }
-
+/* 
+.show{
+  display: show;
+} */
 
