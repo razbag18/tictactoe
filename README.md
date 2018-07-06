@@ -39,6 +39,6 @@ I am really happy with my game, based on my experience level. I completed the ti
 **Struggles**
 1. My logic to find a winner was initially extremeley long and repetative and begged to be put into a function. With Kusan's help I was able to achieve writing an appropriate function to check each line for 3 in a row and announcing a winner.
 2. I struggled with the logic of stopping a player clicking on a square that was already taken by another player, and also how to stop the game. This has been recitified with Kusan's help.
-3. I am still having a scaling issue with the board but I think it's because I'm not entirely comfortable with using flex-box and css in general. 
+3. I am still having a scaling issue with the board but I think it's because I'm not entirely comfortable with using flex-box and css in general. As an extension I would like to change the design of the board so it uses media queries to scale the board down to fit within a phone screen. At this point I've used flex for the board but not for the items to the left and right of it, so when you open it on a phone you can't even see the board. 
 4. Changing players after each turn was challenging too, and took a while to understand why the code I implemented wasn't changing the players. Again, I received help to rectify but I understand why the code used works and mine didn't.
 
