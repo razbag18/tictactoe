@@ -11,7 +11,9 @@ I was inspired to create the themed game due to my love-affair with dumplings, a
 4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a draw.
 5. Players are able to reset after a player has won, or if the game results in a draw.
 
-**Game Link:** [Dumplings&Chopsticks]( https://razbag18.github.io/tictactoe/)
+**Game Link:** 
+[Dumplings&Chopsticks](https://razbag18.github.io/tictactoe/)
+[GameFlowChart](https://github.com/razbag18/tictactoe/blob/master/Game%20Flowchart.jpeg)
 
 ###Process Reflection###
 I mapped out a schedule of code I'd like completed by a specific time over the assignment. On reflection, I was a bit generous with the amount of time I gave myself to complete each task. Because of this, on my next project I now know I can set stricter timelines on myself to achieve more over the course of the assignment. 
