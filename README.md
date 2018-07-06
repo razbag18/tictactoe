@@ -15,11 +15,12 @@ I was inspired to create the themed game due to my love-affair with dumplings, a
 [Dumplings&Chopsticks](https://razbag18.github.io/tictactoe/)
 [GameFlowChart](https://github.com/razbag18/tictactoe/blob/master/Game%20Flowchart.jpeg)
 
-###Process Reflection###
+###Process Reflection
 I mapped out a schedule of code I'd like completed by a specific time over the assignment. On reflection, I was a bit generous with the amount of time I gave myself to complete each task. Because of this, on my next project I now know I can set stricter timelines on myself to achieve more over the course of the assignment. 
 For my first assignment, having only 2.5 weeks of full-time coding under my belt, I am pleased with the outcome. 
 
 **Process Approach**
+
 *First day* 
 1. Make a grid with 9 boxes
 2. Click on a box, put an 'X' inside using an eventListener
@@ -35,6 +36,7 @@ For my first assignment, having only 2.5 weeks of full-time coding under my belt
 8. Resetting board, fancy scoring system, styling
 
 **Review**
+
 I am really happy with my game, based on my experience level. I completed the timeline I'd set out in two days, so I spent the third day making the players alternate after each turn. I would in the future like to advance the game with a few sound effects and a more celebrated winner pop-up that takes over the entire gameboard. I also didn't implement a scoring system to keep a tally of the game which would be very useful. I have coded a maximum number of games players can play so it's in the works. 
 
 
