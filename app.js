@@ -13,35 +13,31 @@ var inPlay = true
 var gameCount = 0
 
 // function for alternating between the two
-var gameCounter = function() {
+var gamePlay = function() {
   //turnCount starts at 0, as determined in the variable declared before the function
   //but after function is run, add 1 to itself. After turn one, the turnCount is now 
   //equal to 1, and is not divisible by 2
-
   //IF I WANT GAME TO BE ONLY 3 INCLUDE IN CODE BELOW gameCount <3
-
   //if the targeted class does not contain 'mark-o' or 'mark-x' allow the game to run
   if (!event.target.classList.contains('mark-o') && !event.target.classList.contains('mark-x') && inPlay) {
 
     turnCount++
-
     //if the turnCount is divisible by 2, then on event, mark-o
-    if (turnCount % 2 === 0) {
+    if (currentPlayer === 'mark-o') {
       event.target.classList.add('mark-o')
-      currentPlayer = 'mark-o'
-      playerTwo.textContent = ''
+      playerTwo.textContent = 'Dumplings wait...'
       playerOne.textContent = 'Chopsticks turn'
-      winMessage = 'dumplings WIN!'
+      winMessage = 'DUMPLINGS WIN!'
       console.log('Player 1\s turn')
       //otherwise, on event, mark-x
     } else {
       event.target.classList.add('mark-x')
-      currentPlayer = 'mark-x'
       playerTwo.textContent = 'Dumplings turn'
-      playerOne.textContent = ''
-      winMessage = 'chopsticks WIN!'
+      playerOne.textContent = 'Chopsticks wait...'
+      winMessage = 'CHOPSTICKS WIN!'
       console.log('Player 2\s turn')
     }
+
     if (turnCount === 9){
       // gameWinner.textContent = 'DRAW'; 
       playerTwo.textContent = 'DRAW';
@@ -61,7 +57,7 @@ var gameCounter = function() {
         playerTwo.textContent = winMessage;
         resetBtn.classList.remove('hidden')
         inPlay = false
-        // gameCount ++
+        //gameCount ++
       }
     }
     //calling the lineCheck function with my passed in arguments. First call is checking if 
@@ -74,23 +70,43 @@ var gameCounter = function() {
     lineCheck(playingSquares[2], playingSquares[5], playingSquares[8], currentPlayer, winMessage);
     lineCheck(playingSquares[0], playingSquares[4], playingSquares[8], currentPlayer, winMessage);
     lineCheck(playingSquares[2], playingSquares[4], playingSquares[6], currentPlayer, winMessage);
+
+
+    // switch player
+    if (currentPlayer === 'mark-o') {
+      currentPlayer = 'mark-x'
+    } else {
+      currentPlayer = 'mark-o'
+    }
   }
-}
+} 
 //on click of the gameboard, running thr function gameCounter, and within that function, lineCheck
-gameBoard.addEventListener('click', gameCounter);
+gameBoard.addEventListener('click', gamePlay);
 
 var resetGame = function(){
+  gameCount++
   playingSquares.forEach(function(item){
     item.classList.remove('mark-x')
     item.classList.remove('mark-o')
-    })
+  })
   // gameWinner.textContent = "";
-  playerOne.textContent = "Chopsticks turn";
-  playerTwo.textContent = "";
+  if (gameCount % 2 === 0){
+    playerOne.textContent = "Chopsticks turn";
+    playerTwo.textContent = 'Dumplings wait...';
+  } else {
+    playerTwo.textContent = "Dumplings turn";
+    playerOne.textContent = 'Chopsticks wait...';
+  }
+  
   turnCount = 0;
   inPlay = true;
   resetBtn.classList.add('hidden')
-  // gameCount ++
   //want to add a player tally
 }
 resetBtn.addEventListener('click', resetGame)
+
+
+//make popup when winner wins, with reset button on popup
+//strikeout the winner
+//remove white when not turn  
+//switch players after each round
