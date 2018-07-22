@@ -26,23 +26,25 @@ For my first assignment, having only 2.5 weeks of full-time coding under my belt
 2. Click on a box, put an 'X' inside using an eventListener
 
 *Second Day*
+
 3. Find 3 in a row horizontally to display winner
 4. Changing the DOM to display winner
 5. Find 3 in a row veritically and diagonally
 
 *Third Day*
+
 6. Refactoring code
 7. Detecing a draw
 8. Resetting board, fancy scoring system, styling
 
 **Review**
 
-I am really happy with my game, based on my experience level. I completed the timeline I'd set out in two days, so I spent the third day making the players alternate after each turn. I would in the future like to advance the game with a few sound effects and a more celebrated winner pop-up that takes over the entire gameboard. I also didn't implement a scoring system to keep a tally of the game which would be very useful. I have coded a maximum number of games players can play so it's in the works. 
+I am really happy with my game based on my experience level. I completed the timeline I'd set out in two days, so I spent the third day making the players alternate after each turn. I would in the future like to advance the game with a few sound effects and a more celebrated winner pop-up that takes over the entire gameboard. I also didn't implement a scoring system to keep a tally of the game which would be very useful. I have coded a maximum number of games players can play so it's in the works. 
 
 
 **Struggles**
-1. My logic to find a winner was initially extremeley long and repetative and begged to be put into a function. With Kusan's help I was able to achieve writing an appropriate function to check each line for 3 in a row and announcing a winner.
-2. I struggled with the logic of stopping a player clicking on a square that was already taken by another player, and also how to stop the game. This has been recitified with Kusan's help.
-3. I am still having a scaling issue with the board but I think it's because I'm not entirely comfortable with using flex-box and css in general. As an extension I would like to change the design of the board so it uses media queries to scale the board down to fit within a phone screen. At this point I've used flex for the board but not for the items to the left and right of it, so when you open it on a phone you can't even see the board. 
+1. My logic to find a winner was initially extremeley long and repetative and begged to be put into a function. With Kasun's help I was able to achieve writing an appropriate function to check each line for 3 in a row and announcing a winner.
+2. I struggled with the logic of stopping a player clicking on a square that was already taken by another player, and also how to stop the game. This has been recitified with Kasun's help.
+3. I am still having a scaling issue with the board but I think it's because I'm not entirely comfortable with using flex-box and css in general. As an extension I would like to change the design of the board so it uses media queries to scale the board down to fit within a phone screen. At this point I've used flex for the board but not for the items to the left and right of it, so when you open it on a phone you can't even see the board. **UPDATE NOW PHONE FRIENDLY **
 4. Changing players after each turn was challenging too, and took a while to understand why the code I implemented wasn't changing the players. Again, I received help to rectify but I understand why the code used works and mine didn't.
 

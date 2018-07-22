@@ -27,14 +27,14 @@ var gamePlay = function() {
       event.target.classList.add('mark-o')
       playerTwo.textContent = 'Dumplings wait...'
       playerOne.textContent = 'Chopsticks turn'
-      winMessage = 'DUMPLINGS WIN!'
+      winMessage = 'Dumplings\n Win!'
       console.log('Player 1\s turn')
       //otherwise, on event, mark-x
     } else {
       event.target.classList.add('mark-x')
       playerTwo.textContent = 'Dumplings turn'
       playerOne.textContent = 'Chopsticks wait...'
-      winMessage = 'CHOPSTICKS WIN!'
+      winMessage = 'Chopsticks\n Win!'
       console.log('Player 2\s turn')
     }
 
